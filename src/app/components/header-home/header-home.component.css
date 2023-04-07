@@ -1,0 +1,26 @@
+#header-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-home * {
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* h1, figure {
+    margin:auto;
+    text-align: center;
+    padding: 2rem;
+} */
+
+h2 {
+    /* display: inline-block; */
+    font-size: 15px;
+    padding-top: 2rem;
+    color: rgb(150, 148, 148);
+}
