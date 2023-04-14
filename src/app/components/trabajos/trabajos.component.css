@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+#logo {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;    
+}
+
+#logo img {
+    width: 165px;
+}
+
+#trabajos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figure-trabajo {
+    display: flex;
+    
+}
+
+.img-trabajo {
+    width: 90%;
+    height:280px;
+    
+    /* height:250px; */
+    /* height:25vh; */
+    object-fit: cover;
+    margin-top: 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}

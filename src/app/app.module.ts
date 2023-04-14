@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +10,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderHomeComponent } from './components/header-home/header-home.component';
 import { MainHomeComponent } from './components/main-home/main-home.component';
+import { TrabajosComponent } from './components/trabajos/trabajos.component';
+import { HomeComponent } from './components/home/home.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { AcercaDeMiComponent } from './components/acerca-de-mi/acerca-de-mi.component';
+import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +24,21 @@ import { MainHomeComponent } from './components/main-home/main-home.component';
     NavbarComponent,
     FooterComponent,
     HeaderHomeComponent,
-    MainHomeComponent
+    MainHomeComponent,
+    TrabajosComponent,
+    HomeComponent,
+    PortfolioComponent,
+    IniciarSesionComponent,
+    AcercaDeMiComponent,
+    TecnologiasComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
