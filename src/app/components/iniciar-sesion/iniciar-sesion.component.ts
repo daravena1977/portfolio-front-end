@@ -31,7 +31,7 @@ export class IniciarSesionComponent {
   get Password(){
     return this.form.get('password')
   }
-
+    
   onEnviar(event:Event) {
     event.preventDefault()
     this.autenticacionService.IniciarSesion(this.form.value).subscribe(data => {

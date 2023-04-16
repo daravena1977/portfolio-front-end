@@ -8,6 +8,8 @@ import { map } from 'rxjs/operators';
 })
 export class AutenticacionService {
   url="http://localhost:8080/api/auth/signin";
+  datos:any;
+
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {
     console.log("El servidor esta activo")
@@ -18,6 +20,8 @@ export class AutenticacionService {
       console.log(credenciales);
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       console.log(data)
+      this.datos = data
+      console.log(this.datos)
       return data
     }))
    }
