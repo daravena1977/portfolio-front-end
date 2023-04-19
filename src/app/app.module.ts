@@ -16,7 +16,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { AcercaDeMiComponent } from './components/acerca-de-mi/acerca-de-mi.component';
 import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { InterceptorJwtService } from './interceptors/interceptor-jwt.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,14 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorJwtService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

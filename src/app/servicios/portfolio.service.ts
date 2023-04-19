@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AutenticacionService } from './autenticacion.service';
 
@@ -15,7 +15,9 @@ export class PortfolioService {
    }
 
   obtenerDatos(): Observable<any> {
-    return this.http.get<any>(this.url + 'persona/buscar-persona/2')
+    
+
+    return this.http.get<any>(this.url + 'persona/buscar-persona/1')
   }
 
 }
