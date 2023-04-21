@@ -1,4 +1,4 @@
-import { HttpContextToken, HttpEvent, HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -13,9 +13,6 @@ export class InterceptorJwtService implements HttpInterceptor {
     req = req.clone({
       withCredentials: true
     })
-
-    
-
     return next.handle(req);
   }
 
