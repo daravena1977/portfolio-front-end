@@ -10,6 +10,7 @@ import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 })
 export class IniciarSesionComponent {
   form:FormGroup;
+  datos:any;
   constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private ruta:Router) {
     this.form = this.formBuilder.group(
       {
@@ -36,6 +37,8 @@ export class IniciarSesionComponent {
     event.preventDefault()
     this.autenticacionService.IniciarSesion(this.form.value).subscribe(data => {
       console.log("Data: " + JSON.stringify(data));
+      this.datos = data;
+      console.log(this.datos.id + ' este es el nombre')
       this.ruta.navigate(['/portfolio'])
     })
   }

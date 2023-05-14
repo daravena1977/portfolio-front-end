@@ -4,12 +4,28 @@ section {
     align-items: center;
 }
 
-section * {
+section h2, section img{
     padding: 2rem;
 }
 
 #foto-image {
     border-radius: 50%;
+}
+
+#button-modal {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    align-self: flex-start;
+    border-radius: 1rem;
+}
+
+#modal-agregar-seccion {
+    margin: 2rem auto;    
+    width: 90% !important;
+}
+
+.modal-editar-option {
+   color: rgb(90, 88, 88); 
+   text-decoration: none;
 }
 
 section h2 {

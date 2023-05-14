@@ -18,6 +18,7 @@ import { AcercaDeMiComponent } from './components/acerca-de-mi/acerca-de-mi.comp
 import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InterceptorJwtService } from './interceptors/interceptor-jwt.service';
+import { CrearLaboralComponent } from './modales/crear-laboral/crear-laboral.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { InterceptorJwtService } from './interceptors/interceptor-jwt.service';
     IniciarSesionComponent,
     AcercaDeMiComponent,
     TecnologiasComponent,
+    CrearLaboralComponent,
     
   ],
   imports: [

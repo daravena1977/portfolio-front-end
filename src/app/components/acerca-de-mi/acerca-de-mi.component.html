@@ -9,6 +9,86 @@
       width="300"
     />
   </figure>
+
+  <!-- Button trigger modal -->
+<div class="container">
+  <button id="button-modal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Añadir sección
+</button>
+</div>
+
+
+<!-- Modal -->
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div id="modal-agregar-seccion" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir sección</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card" style="width: 100%;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a class="modal-editar-option" href="" data-bs-toggle="modal" data-bs-target="#añadirExperiencia">Añadir experiencia laboral</a></li>
+            <li class="list-group-item"><a class="modal-editar-option" href="">Añadir educación</a></li>
+            <li class="list-group-item"><a class="modal-editar-option" href="">Añadir habilidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade form-group" id="añadirExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombre de la empresa</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" required [(ngModel)]="experiencia.nombreEmpresa" name="nombreEmpresa" placeholder="Example input placeholder">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Cargo</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" required [(ngModel)]="experiencia.cargo" name="cargo" placeholder="Another input placeholder">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Desde</label>
+          <input type="date" class="form-control" id="formGroupExampleInput2" required [(ngModel)]="experiencia.fechaDesde" name="fechaDesde" placeholder="Another input placeholder">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Hasta</label>
+          <input type="date" class="form-control" id="formGroupExampleInput2"  required [(ngModel)]="experiencia.fechaHasta" name="fechaHasta" placeholder="Another input placeholder">
+        </div>
+        <div class="input-group mb-3">
+          
+          <input type="file" class="form-control" id="inputGroupFile04" required [(ngModel)]="experiencia.urlImg" name="urlImg" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">+</button>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" required [(ngModel)]="experiencia.funciones" name="funciones" style="height: 200px"></textarea>
+          <label for="floatingTextarea2">Descripción</label>
+        </div>
+      </div>
+      <div class="modal-footer">        
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Volver</button>
+        <button type="button" class=" btn btn-primary" (click)="guardarExperiencia()">Guardar</button>
+      </div>      
+    </div>
+  </div>
+</div>
+
+
+
   <h2>{{acercaDe.nombre}} {{acercaDe.apellido}} - {{acercaDe.cargo}} </h2>
   <p>
     {{acercaDe.acercaDeMi}}
@@ -40,6 +120,8 @@
       <a href="#" class="card-link">Another link</a>
     </div>
   </div>
+
+  
   
 </section>
 <section id="estudios" class="container">
